@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'application'
+    id "net.ltgt.apt" version "0.8"
+}
+
+group 'net.fazlamesai'
+version '1.0-SNAPSHOT'
+
+
+sourceCompatibility = 1.8
+mainClassName = 'net.fazlamesai.posts.api.PostsApi'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: '1.0.5'
+    apt group: 'org.immutables', name: 'value', version: '2.4.0'
+    compile group: 'org.immutables', name: 'value', version: '2.4.0'
+}
